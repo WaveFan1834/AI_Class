@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5E8C7; /* Pale Parchment */
+    color: #3E2723; /* Dark Brown */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3em;
+    color: #BF6727; /* Spiced Orange */
+    margin-bottom: 0.2em;
+    text-shadow: 1px 1px 2px #A47C48;
+}
+
+header .subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em;
+    color: #A47C48; /* Desert Shadow */
+}
+
+#class-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.class-card {
+    background-color: #E8DAB2; /* Light Sand */
+    border: 1px solid #A47C48; /* Desert Shadow */
+    border-radius: 8px;
+    padding: 20px;
+    width: clamp(300px, 100%, 350px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.class-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(62, 39, 35, 0.2);
+}
+
+.class-icon {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #BF6727; /* Spiced Orange */
+    font-weight: bold;
+}
+
+.class-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8em;
+    color: #BF6727; /* Spiced Orange */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.class-divider {
+    border: 0;
+    height: 1px;
+    background-color: #A47C48; /* Desert Shadow */
+    margin: 10px 0 15px 0;
+}
+
+.class-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2em;
+    color: #3E2723;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.class-description,
+.class-synergy {
+    font-size: 0.95em;
+    color: #4E342E; /* Slightly lighter brown for text */
+    margin-bottom: 10px;
+}
+
+.class-synergy {
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #A47C48;
+    font-size: 0.9em;
+    color: #A47C48;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+    header .subtitle {
+        font-size: 1.2em;
+    }
+    .class-card {
+        width: clamp(280px, 90%, 450px); /* Allow cards to be wider on smaller screens if fewer */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    header .subtitle {
+        font-size: 1em;
+    }
+    .class-name {
+        font-size: 1.5em;
+    }
+}
